@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Библиотека</title>
+  <link rel="icon" href="free.icon.ico">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1>📚 Электронная библиотека</h1>
+
+    <div class="buttons">
+      <button id="formToggle" class="primary-btn">➕ Добавить книгу</button>
+      <button id="listToggle" class="secondary-btn">📖 Список книг</button>
+    </div>
+
+    <!-- Раздел добавления книги -->
+    <div id="formSection" class="card">
+      <h2>Добавить книгу</h2>
+      <input type="text" id="title" placeholder="Название" />
+      <input type="text" id="author" placeholder="Автор" />
+      <input type="text" id="genre" placeholder="Жанр" />
+      <input type="number" id="year" placeholder="Год" />
+      <input type="number" id="copies" placeholder="Кол-во" />
+      <button onclick="addBook()" class="primary-btn">💾 Сохранить</button>
+    </div>
+
+    <!-- Раздел списка книг, скрыт по умолчанию -->
+    <div id="listSection" class="card hidden">
+      <h2>Список книг</h2>
+
+      <!-- Поиск -->
+      <input type="text" id="searchInput" placeholder="🔍 Поиск по названию, автору или жанру..." />
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Название</th>
+            <th>Автор</th>
+            <th>Жанр</th>
+            <th>Год</th>
+            <th>Кол-во</th>
+          </tr>
+        </thead>
+        <tbody id="bookTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
